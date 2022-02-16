@@ -1,0 +1,13 @@
+<center>
+<h1><%= @restaurant.name %></h1>
+<h4><%= @restaurant.address %></h4>
+<h4><%= @restaurant.category %></h4>
+<h4>Average rating: <%= @average_rating %></h4>
+<h4><strong>Reviews:</strong></h4>
+<h4><% @reviews.each do |review| %>
+"<%=review.content%>"
+<span style="color: red">Rating: </span><%= review.rating %>
+<br>
+<% end %></h4>
+<p><%= link_to "go back", restaurants_path  %></p>
+</center>
